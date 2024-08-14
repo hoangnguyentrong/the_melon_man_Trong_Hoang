@@ -20,6 +20,7 @@ game.player = {
 					}
 					if (time < 150) {
 						time++
+						console.log(1)
 						this.fallTimeout(startingY, time, maxHeight)
 					} else {
 						game.isOver = true

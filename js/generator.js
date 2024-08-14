@@ -1,4 +1,12 @@
 game.structures = {
+	"newPlatform": [
+    {"tileColumn": 0, "tileRow": 1, "x": 0, "y": 0},
+    {"tileColumn": 6, "tileRow": 1, "x": 0, "y": -1},
+    {"tileColumn": 1, "tileRow": 1, "x": 1, "y": 0},
+    {"tileColumn": 7, "tileRow": 1, "x": 1, "y": -1},
+    {"tileColumn": 2, "tileRow": 1, "x": 2, "y": 0},
+    {"tileColumn": 8, "tileRow": 1, "x": 2, "y": -1}
+],
 	"grassPlatform": [
 		{tileColumn: 0, tileRow: 0, x: 0, y: 0}, {tileColumn: 5, tileRow: 1, x: 0, y: -1, collidable: false},
 		{tileColumn: 1, tileRow: 0, x: 1, y: 0}, {tileColumn: 5, tileRow: 1, x: 1, y: -1, collidable: false},
@@ -15,7 +23,8 @@ game.structures = {
 		{tileColumn: 3, tileRow: 2, x: 0, y: 0}, {tileColumn: 4, tileRow: 2, x: 1, y: 0},
 		{tileColumn: 3, tileRow: 3, x: 0, y: 1, collidable: false}, {tileColumn: 4, tileRow: 3, x: 1, y: 1, collidable: false}
 	],
-	"snowman": [{tileColumn: 5, tileRow: 3, x: 0, y: 0, collidable: false}, {tileColumn: 5, tileRow: 2, x: 0, y: -1, collidable: false}],
+	"snowman": [{tileColumn: 5, tileRow: 3, x: 0, y: 0, collidable: false}, 
+		{tileColumn: 5, tileRow: 2, x: 0, y: -1, collidable: false}],
   "lava_platform": [
 			{tileColumn: 6, tileRow: 1, x: -1, y: -0.9, collidable: false},{tileColumn: 7, tileRow: 1, x: 0, y: -0.9, collidable: false}, {tileColumn: 8, tileRow: 1, x: 1, y: -0.9, collidable: false},
 			{tileColumn: 0, tileRow: 4, x: -1, y: 0},{tileColumn: 1, tileRow: 4, x: 0, y: 0}, {tileColumn: 2, tileRow: 4, x: 1, y: 0},
@@ -26,7 +35,7 @@ game.structures = {
 game.generateMap = function () {
 	// Generate a platform for the player
 	this.map.structures.push({
-		name: "grassPlatform",
+		name: "newPlatform",
 		x: 0,
 		y: 0
 	})
